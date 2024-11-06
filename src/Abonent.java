@@ -4,17 +4,17 @@ public class Abonent {
     private String name;
     private String surName;
     private String adress;
-    private int secondsPassedInCall;
+    private int minutesPassedInCall;
     private String creditCardNumber;
     private int debt;
 
-    public Abonent(int id, String lastName, String name, String surName, String adress, int secondsPassedInCall, String creditCardNumber, int debt) {
+    public Abonent(int id, String lastName, String name, String surName, String adress, int minutesPassedInCall, String creditCardNumber, int debt) {
         this.id = id;
         this.lastName = lastName;
         this.name = name;
         this.surName = surName;
         this.adress = adress;
-        this.secondsPassedInCall = secondsPassedInCall;
+        this.minutesPassedInCall = minutesPassedInCall;
         this.creditCardNumber = creditCardNumber;
         this.debt = debt;
     }
@@ -66,12 +66,12 @@ public class Abonent {
         this.adress = adress;
     }
 
-    public int getSecondsPassedInCall() {
-        return secondsPassedInCall;
+    public int getminutesPassedInCall() {
+        return minutesPassedInCall;
     }
 
-    public void setSecondsPassedInCall(int secondsPassedInCall) {
-        this.secondsPassedInCall = secondsPassedInCall;
+    public void setminutesPassedInCall(int minutesPassedInCall) {
+        this.minutesPassedInCall = minutesPassedInCall;
     }
 
     public String getCreditCardNumber() {
@@ -88,5 +88,9 @@ public class Abonent {
 
     public void setDebt(int debt) {
         this.debt = debt;
+    }
+
+    public String toString(){
+        return "ID: " + id + " Фамилия: " + lastName + " Имя: " + name + " Отчество: " + surName + " Адрес: " + adress + " Общее кол-во минут: " + minutesPassedInCall + " Номер карты: " + creditCardNumber + " Сумма долга: " + debt;
     }
 }
